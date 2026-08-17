@@ -1064,38 +1064,46 @@ main {
 }
 
 .status-badge {
-  font-size: 11px;
-  font-weight: 500;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  font-size: 10px;
+  font-weight: 600;
   padding: 3px 8px;
-  border-radius: 6px;
+  border-radius: 12px;
   display: inline-flex;
   align-items: center;
   gap: 4px;
   width: max-content;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  letter-spacing: 0.2px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .status-badge.live {
-  background: rgba(46, 204, 113, 0.15);
+  background: rgba(46, 204, 113, 0.25);
   color: #2ecc71;
-  border: 1px solid rgba(46, 204, 113, 0.3);
+  border: 1px solid rgba(46, 204, 113, 0.4);
 }
 
 .status-badge.beta {
-  background: rgba(241, 196, 15, 0.15);
+  background: rgba(241, 196, 15, 0.25);
   color: #f1c40f;
-  border: 1px solid rgba(241, 196, 15, 0.3);
+  border: 1px solid rgba(241, 196, 15, 0.4);
 }
 
 .status-badge.wip {
-  background: rgba(230, 126, 34, 0.15);
+  background: rgba(230, 126, 34, 0.25);
   color: #e67e22;
-  border: 1px solid rgba(230, 126, 34, 0.3);
+  border: 1px solid rgba(230, 126, 34, 0.4);
 }
 
 .status-badge.opensource {
-  background: rgba(52, 152, 219, 0.15);
+  background: rgba(52, 152, 219, 0.25);
   color: #3498db;
-  border: 1px solid rgba(52, 152, 219, 0.3);
+  border: 1px solid rgba(52, 152, 219, 0.4);
 }
 
 
