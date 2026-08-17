@@ -1036,7 +1036,7 @@ main {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 219, 112, 0.15);
 }
 
-.project-item > a:hover img { transform: scale(1.1); }
+.project-item > a:hover img { transform: none; }
 
 .project-title,
 .project-category { margin-left: 10px; }
