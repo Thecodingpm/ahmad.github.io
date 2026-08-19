@@ -822,56 +822,66 @@ main {
 .testing-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 4px;
+  gap: 10px;
+  margin-top: 6px;
 }
 
 .testing-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: var(--fw-600);
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
   transition: var(--transition-1);
   text-decoration: none;
   cursor: pointer;
+  letter-spacing: 0.2px;
+}
+
+.testing-btn ion-icon {
+  font-size: 18px;
 }
 
 .testing-btn.primary {
-  background: var(--bg-gradient-yellow-1);
-  color: var(--smoky-black);
-  box-shadow: 0 4px 12px rgba(255, 219, 112, 0.2);
+  background: linear-gradient(135deg, #1a73e8 0%, #1557b0 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(26, 115, 232, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .testing-btn.primary:hover {
-  background: var(--bg-gradient-yellow-2);
+  background: linear-gradient(135deg, #2b7de9 0%, #1a65d6 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(255, 219, 112, 0.35);
-}
-
-.testing-btn.secondary {
-  background: var(--onyx);
-  color: var(--white-1);
-  border: 1px solid var(--jet);
-}
-
-.testing-btn.secondary:hover {
-  background: var(--jet);
-  border-color: var(--light-gray-70);
-  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 115, 232, 0.65);
 }
 
 .testing-btn.play {
-  background: rgba(46, 204, 113, 0.15);
-  color: #2ecc71;
-  border: 1px solid rgba(46, 204, 113, 0.3);
+  background: linear-gradient(135deg, #00c853 0%, #009624 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 200, 83, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .testing-btn.play:hover {
-  background: rgba(46, 204, 113, 0.25);
+  background: linear-gradient(135deg, #00e676 0%, #00a82b 100%);
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 200, 83, 0.55);
+}
+
+.testing-btn.secondary {
+  background: #1e1e24;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.testing-btn.secondary:hover {
+  background: #2b2b36;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
 }
 
 .testing-modal-footer {
