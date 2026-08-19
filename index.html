@@ -586,17 +586,17 @@
 
             <!-- Project 4: Shpare Splitter (Mobile - Closed Testing) -->
             <li class="project-item active" data-filter-item data-category="mobile apps">
-              <a href="https://github.com/Thecodingpm" target="_blank" rel="noopener noreferrer">
+              <a href="javascript:void(0)" data-testing-modal-trigger="shpare-splitter">
                 <figure class="project-img">
                   <span class="status-badge beta">● Closed Testing</span>
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="information-circle-outline"></ion-icon>
                   </div>
                   <img src="./assets/images/project-shpare-splitter.png" alt="Shpare Splitter Video Utility" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Shpare Splitter — Video Downloader</h3>
-                <p class="project-category">Flutter • iOS & Android (Google Play)</p>
+                <p class="project-category">Flutter • Closed Testing (Click to Join & Download)</p>
               </a>
             </li>
 
@@ -755,9 +755,86 @@
 
   </main>
 
+  <!--
+    - #CLOSED TESTING MODAL
+  -->
+  <div class="modal-container" data-modal-container>
 
+    <div class="overlay" data-overlay></div>
 
+    <section class="closed-testing-modal" data-modal>
 
+      <button class="modal-close-btn" data-modal-close-btn aria-label="Close modal">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="testing-modal-header">
+        <div class="testing-modal-icon">
+          <ion-icon name="logo-google-playstore"></ion-icon>
+        </div>
+        <div>
+          <h3 class="testing-modal-title">Shpare Splitter</h3>
+          <span class="testing-badge-inline">● Google Play Closed Testing</span>
+        </div>
+      </div>
+
+      <p class="testing-modal-intro">
+        This app is currently in <strong>Closed Testing</strong> on Google Play. Follow these <strong>2 quick steps</strong> to get instant access and install it on your device:
+      </p>
+
+      <div class="testing-steps-list">
+
+        <!-- Step 1 -->
+        <div class="testing-step-card">
+          <div class="testing-step-inner">
+            <div class="testing-step-header">
+              <div class="testing-step-num">1</div>
+              <h4 class="testing-step-title">Join Google Group (Required)</h4>
+            </div>
+            <p class="testing-step-desc">
+              Google requires testers to be members of the testing group to authorize Play Store download access.
+            </p>
+            <div class="testing-actions">
+              <a href="https://groups.google.com/g/apptestingforme" target="_blank" rel="noopener noreferrer" class="testing-btn primary">
+                <ion-icon name="people"></ion-icon>
+                <span>Join Google Group</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="testing-step-card">
+          <div class="testing-step-inner">
+            <div class="testing-step-header">
+              <div class="testing-step-num green">2</div>
+              <h4 class="testing-step-title">Opt-in & Download on Google Play</h4>
+            </div>
+            <p class="testing-step-desc">
+              After joining the group, accept the testing invite on Web or download directly on your Android device.
+            </p>
+            <div class="testing-actions">
+              <a href="https://play.google.com/apps/testing/com.sphare.splitter" target="_blank" rel="noopener noreferrer" class="testing-btn play">
+                <ion-icon name="globe-outline"></ion-icon>
+                <span>Web Opt-In Link</span>
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.sphare.splitter" target="_blank" rel="noopener noreferrer" class="testing-btn secondary">
+                <ion-icon name="logo-google-playstore"></ion-icon>
+                <span>Android Play Store</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="testing-modal-footer">
+        Package: <code>com.sphare.splitter</code> • Built with Flutter & Dart
+      </div>
+
+    </section>
+
+  </div>
 
   <!--
     - Custom JS

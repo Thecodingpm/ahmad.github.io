@@ -16,8 +16,9 @@ if (sidebarBtn && sidebar) {
   });
 }
 
-// testimonials modal variables (with null safety)
+// modal variables (with null safety)
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+const testingModalTriggers = document.querySelectorAll("[data-testing-modal-trigger]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
@@ -26,10 +27,26 @@ const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
-const testimonialsModalFunc = function () {
+const openModalFunc = function () {
   if (modalContainer && overlay) {
-    modalContainer.classList.toggle("active");
-    overlay.classList.toggle("active");
+    modalContainer.classList.add("active");
+    overlay.classList.add("active");
+  }
+}
+
+const closeModalFunc = function () {
+  if (modalContainer && overlay) {
+    modalContainer.classList.remove("active");
+    overlay.classList.remove("active");
+  }
+}
+
+if (testingModalTriggers.length > 0) {
+  for (let i = 0; i < testingModalTriggers.length; i++) {
+    testingModalTriggers[i].addEventListener("click", function (e) {
+      e.preventDefault();
+      openModalFunc();
+    });
   }
 }
 
@@ -41,14 +58,21 @@ if (testimonialsItem.length > 0) {
         modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
         modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
         modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-        testimonialsModalFunc();
+        openModalFunc();
       }
     });
   }
 }
 
-if (modalCloseBtn) modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-if (overlay) overlay.addEventListener("click", testimonialsModalFunc);
+if (modalCloseBtn) modalCloseBtn.addEventListener("click", closeModalFunc);
+if (overlay) overlay.addEventListener("click", closeModalFunc);
+
+// Close modal on Escape key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && modalContainer && modalContainer.classList.contains("active")) {
+    closeModalFunc();
+  }
+});
 
 // custom select & filter variables
 const select = document.querySelector("[data-select]");
